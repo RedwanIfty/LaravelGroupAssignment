@@ -20,7 +20,7 @@ class UMSController extends Controller
         // return $student->department;
          $teacher=UMSTeacher::where('id',$id)->first();
         //return $teacher->department;//->departmentTeacher;
-        $course=UMSCourses::where('id',$id)->first();
+        //$course=UMSCourses::where('id',$id)->first();
         //return $course->department;
         $s_c=UMSStudentCourse::where('id',$id)->first();
         return $s_c->student;
