@@ -10,5 +10,8 @@
         <div>
             @yield('department')
         </div>
+        <div>
+            @yield('teacher')
+        </div>
     </body>
 </html>

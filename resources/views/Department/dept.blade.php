@@ -13,3 +13,9 @@
     ID:{{$dp->id}}<br>
     @endforeach
 @endsection
+@section('teacher')
+    <h3>Teacher</h3>
+    @foreach($teacher as $t)
+    Name:{{$t->name}}<br><br>
+    @endforeach
+@endsection

@@ -16,4 +16,4 @@ use App\Http\Controllers\UMSController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/ums/show',[UMSController::class,'show'])->name('ums.show');
+Route::get('/ums/show/{id}',[UMSController::class,'show'])->name('ums.show');
