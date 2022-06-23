@@ -15,7 +15,7 @@ class UMSStudent extends Model
     public function department(){
         return $this->belongsTo(UMSDepartment::class,'d_id','id');
     }
-    public function student_course(){
+    public function studentCourse(){
         return $this->hasMany(UMSStudentCourse::class,'s_id','id');
     }
 }

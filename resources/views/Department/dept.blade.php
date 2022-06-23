@@ -1,21 +1,21 @@
-@extends('layouts.main')
-@section('content')
-    <h3>Department</h3>
-    @foreach($student as $st)
-    Name:{{$st->name}}<br>
-    ID:{{$st->id}}<br>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/main.css') }}">
+</head>
+<body>
+    @foreach($dname as $dn)
+    <diV class='intro'> Name:{{$dn->name}}
+        Id:{{$dn->id}}</div>
     @endforeach
-@endsection
-@section('department')
-    <h3>Student</h3>
+    <h1>Offered courses</h1>
     @foreach($department as $dp)
-    Name:{{$dp->name}}<br>
-    ID:{{$dp->id}}<br>
+    <h3><b>course:</b></h3>{{$dp->name}}<br>
+    @foreach($dp->courses as $ct)
+        Name:{{$ct->teacherCourse->teacher->name}}
     @endforeach
-@endsection
-@section('teacher')
-    <h3>Teacher</h3>
-    @foreach($teacher as $t)
-    Name:{{$t->name}}<br><br>
     @endforeach
-@endsection
+
+</body>
+</html>
